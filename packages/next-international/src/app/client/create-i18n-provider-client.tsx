@@ -50,12 +50,17 @@ export function createI18nProviderClient<Locale extends BaseLocale>(
       notFound();
     }
 
+    /**
+     * Suspense has been disabled here so that we can load the page with JavaScript disabled and not see
+     * the fallback which takes over the entire page. We do not use any of the suspense required features
+     * such as client side locale switching, therefore we do not need it.
+     */
     return (
-      <Suspense fallback={fallback}>
-        <I18nProvider locale={locale} importLocale={importFnLocale()}>
-          {children}
-        </I18nProvider>
-      </Suspense>
+      // <Suspense fallback={fallback}>
+      <I18nProvider locale={locale} importLocale={importFnLocale()}>
+        {children}
+      </I18nProvider>
+      // </Suspense>
     );
   };
 }
