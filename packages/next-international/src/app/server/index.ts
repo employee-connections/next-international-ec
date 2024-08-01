@@ -6,6 +6,7 @@ import { createGetCurrentLocale } from './create-get-current-locale';
 import { createGetI18n } from './create-get-i18n';
 import { createGetScopedI18n } from './create-get-scoped-i18n';
 import { createGetStaticParams } from './create-get-static-params';
+import { createGetLocaleContent } from './create-get-locale-content';
 
 export { setStaticParamsLocale } from './get-locale-cache';
 
@@ -23,11 +24,13 @@ export function createI18nServer<Locales extends ImportedLocales, OtherLocales e
   const getScopedI18n = createGetScopedI18n<Locales, Locale>(locales, config);
   const getCurrentLocale = createGetCurrentLocale<LocalesKeys>();
   const getStaticParams = createGetStaticParams(locales, config);
+  const getLocaleContent = createGetLocaleContent(locales);
 
   return {
     getI18n,
     getScopedI18n,
     getCurrentLocale,
     getStaticParams,
+    getLocaleContent,
   };
 }
