@@ -1,7 +1,7 @@
 {
-  "name": "international-types",
+  "name": "international-types-ec",
   "version": "0.8.1",
-  "description": "Type-safe internationalization (i18n) utility types",
+  "description": "Type-safe internationalization (i18n) utility types - Modified for the needs of Clinch Employee Connections",
   "types": "dist/index.d.ts",
   "keywords": [
     "i18n",
@@ -15,10 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/QuiiBz/next-international.git"
-  },
-  "bugs": {
-    "url": "https://github.com/QuiiBz/next-international/issues"
+    "url": "git+https://github.com/employee-connections/next-international-ec.git"
   },
   "homepage": "https://next-international.vercel.app",
   "license": "MIT",
