@@ -6,7 +6,7 @@ export function createGetLocaleContent<Locales extends ImportedLocales>(locales:
   const localeCache = new Map<string, BaseLocale>();
 
   return async function getLocaleContent() {
-    const locale = getLocaleCache();
+    const locale = await getLocaleCache();
     const cached = localeCache.get(locale);
     if (cached) {
       return cached;

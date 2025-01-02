@@ -1,6 +1,6 @@
 {
   "name": "next-international-ec",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "Type-safe internationalization (i18n) utility types - Modified for the needs of Clinch Employee Connections",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
